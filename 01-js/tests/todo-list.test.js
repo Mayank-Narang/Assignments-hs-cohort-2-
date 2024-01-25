@@ -6,8 +6,10 @@ describe('Todo', () => {
 	beforeEach(() => {
 		todoList = new Todo();
 	});
-
-	afterEach(() => {
+	
+	//this thing was not present in original file. Which lead to failing the tests as the previous stuff was not getting cleared
+	
+	afterEach(() => { // added this function to clear the todo list whenever an action ends 
 		todoList.clear();
 	});
 
